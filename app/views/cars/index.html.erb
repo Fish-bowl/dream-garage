@@ -1,0 +1,6 @@
+<h1>Dream Garage</h1>
+<%= link_to  "Add a Car", new_car_path %>
+<% @cars.each do |car| %>
+<h2><%= car.make %></h2>
+<%= link_to  "Look at car", car_path(car) %>
+<% end %>
