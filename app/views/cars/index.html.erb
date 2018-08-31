@@ -1,6 +1,10 @@
 <h1>Dream Garage</h1>
-<%= link_to  "Add a Car", new_car_path %>
-<% @cars.each do |car| %>
-<h2><%= car.make %></h2>
-<%= link_to  "Look at car", car_path(car) %>
-<% end %>
+<div class='card-panel hoverable'>
+  <%= link_to  "Add a Car", new_car_path %>
+  <% @cars.each do |car| %>
+  <h2><%= car.make %></h2>
+  <%= link_to  "Edit Car", edit_car_path(car) %>
+  <%= link_to  "Look at car", car_path(car) %>
+  <%= link_to  "Delete Car", car, method: :delete %>
+  <% end %>
+</div>
